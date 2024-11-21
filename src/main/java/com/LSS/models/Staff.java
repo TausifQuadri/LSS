@@ -10,5 +10,10 @@ import jakarta.persistence.Table;
 @Table
 public class Staff {
 	private String staffName;
+@Id
+@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Staff_Sequence")
+@SequenceGenerator(name = "Staff_Sequence", sequenceName = "Staff_Sequence", allocationSize = 1)
+
+	private Long staffId;
 
 }
