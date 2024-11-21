@@ -15,5 +15,6 @@ public class Staff {
 @SequenceGenerator(name = "Staff_Sequence", sequenceName = "Staff_Sequence", allocationSize = 1)
 
 	private Long staffId;
+    private String Staff_email;
 
 }
