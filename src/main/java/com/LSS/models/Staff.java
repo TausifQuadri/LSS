@@ -16,5 +16,6 @@ public class Staff {
 
 	private Long staffId;
     private String Staff_email;
+private String Address;
 
 }
