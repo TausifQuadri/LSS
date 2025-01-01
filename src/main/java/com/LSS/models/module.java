@@ -31,6 +31,8 @@ public class module {
 
 	public void setModule_name(String module_name) {
 		Module_name = module_name;
+		
+		
 	}
 
 	public module() {

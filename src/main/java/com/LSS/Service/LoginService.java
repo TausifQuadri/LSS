@@ -14,7 +14,7 @@ public class LoginService {
 		this.Loginrepository=LoginRepository;
 	}
 	public boolean Verification (String username,String pass) {
-		List<Login> pass1 = Loginrepository.findPassByUsernameAndPass(username, pass);
+		List<Login> pass1 = Loginrepository.findByLoginIdAndPassword(username, pass);
 		if(pass1== null) {
 			return false;
 		}
