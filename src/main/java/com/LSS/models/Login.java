@@ -13,21 +13,21 @@ import jakarta.persistence.Table;
 public class Login {
 private String LoginId;
 private String Password;
-private String Authentication;
+private Long AuthenticationID;
 @Id
 @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Login_Sequence")
 @SequenceGenerator(name = "Login_Sequence", sequenceName = "Login_Sequence", allocationSize = 1)
 private Long id ;
-	public Login(String loginId, String password, String authentication) {
+	public Login(String loginId, String password, Long authenticationID) {
 	super();
 	LoginId = loginId;
 	Password = password;
-	Authentication = authentication;
+	AuthenticationID = authenticationID;
 	
 }
 	@Override
 	public String toString() {
-		return "Login [LoginId=" + LoginId + ", Password=" + Password + ", Authentication=" + Authentication + ", id="
+		return "Login [LoginId=" + LoginId + ", Password=" + Password + ", Authentication=" + AuthenticationID + ", id="
 				+ id + "]";
 	}
 	public Login() {
@@ -45,11 +45,11 @@ private Long id ;
 	public void setPassword(String password) {
 		Password = password;
 	}
-	public String getAuthentication() {
-		return Authentication;
+	public Long getAuthentication() {
+		return AuthenticationID;
 	}
-	public void setAuthentication(String authentication) {
-		Authentication = authentication;
+	public void setAuthentication(Long authentication) {
+		AuthenticationID = authentication;
 	}
 	public Long getId() {
 		return id;
